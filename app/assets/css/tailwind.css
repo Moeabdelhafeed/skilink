@@ -209,5 +209,16 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(125% 125% at 50% 10%, var(--color-background) 40%, #dae74ba8 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
 }
+
+
+
+
+

@@ -29,5 +29,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'motion-v/nuxt',
     'nuxt-lucide-icons',
+    'v-gsap-nuxt',
   ],
 })
