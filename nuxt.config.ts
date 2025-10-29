@@ -24,5 +24,10 @@ export default defineNuxtConfig({
   },
 
 
-  modules: ['shadcn-nuxt', '@vueuse/nuxt','motion-v/nuxt'],
+  modules: [
+    'shadcn-nuxt',
+    '@vueuse/nuxt',
+    'motion-v/nuxt',
+    'nuxt-lucide-icons',
+  ],
 })
