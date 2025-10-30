@@ -26,41 +26,41 @@ const loading5 = ref(null)
 onMounted(async () => {
   await nextTick()
 
-//   const tl = useGSAP().timeline()
+  const tl = useGSAP().timeline()
 
-//   tl.delay(1)
+  tl.delay(1)
 
-//   tl.to(loading5.value, {
-//     y: -1000,
-//     duration: 1,
+  tl.to(loading5.value, {
+    y: -1000,
+    duration: 1,
     
-//     ease: "power2.inOut",
-//   })
-//   tl.to(loading4.value, {
-//     y: -1000,
-//     duration: 1,
-//     ease: "power2.inOut",
-//   },"<0.1")
-//   tl.to(loading3.value, {
-//     y: -1000,
-//     duration: 1,
-//     ease: "power2.inOut",
+    ease: "power2.inOut",
+  })
+  tl.to(loading4.value, {
+    y: -1000,
+    duration: 1,
+    ease: "power2.inOut",
+  },"<0.1")
+  tl.to(loading3.value, {
+    y: -1000,
+    duration: 1,
+    ease: "power2.inOut",
 
-//   },"<0.2")
-//   tl.to(loading2.value, {
-//     y: -1000,
-//     duration: 1,
-//     ease: "power2.inOut",
-//   },"<0.3")
-//   tl.to(loading1.value, {
-//     y: -1000,
-//     duration: 1,
-//     ease: "power2.inOut",
-//   },"<0.4")
+  },"<0.2")
+  tl.to(loading2.value, {
+    y: -1000,
+    duration: 1,
+    ease: "power2.inOut",
+  },"<0.3")
+  tl.to(loading1.value, {
+    y: -1000,
+    duration: 1,
+    ease: "power2.inOut",
+  },"<0.4")
 
-//   tl.call(() => {
-//     loading.value = false
-//   })
+  tl.call(() => {
+    loading.value = false
+  })
 })
 
 
