@@ -4,7 +4,7 @@
         <DialogTrigger as-child>
             <CardContainer class="cursor-pointer">
                 <CardBody
-                    class="group/card relative w-full h-max rounded-xl border border-white/[0.1] bg-[#334c648c] p-6 dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.3] flex flex-col"
+                    class="group/card relative w-full h-max rounded-xl border border-white/[0.1] bg-[#334c648c] md:p-6 p-4 dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.3] flex flex-col"
                 >
                     <CardItem
                     :translate-z="50"
