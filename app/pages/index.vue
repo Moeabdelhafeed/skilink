@@ -506,6 +506,13 @@ onMounted(() => {
 useSeoMeta({
   title: 'Skilink - Your Global Growth Partner',
   description: 'Skilink connects highly skilled professionals with forward-thinking companies across the globe. We simplify remote hiring and build reliable, distributed teams.',
+  ogTitle: 'Skilink - Your Global Growth Partner',
+  ogDescription: 'Skilink connects highly skilled professionals with forward-thinking companies across the globe. We simplify remote hiring and build reliable, distributed teams.',
+  ogImage: '/images/brand/seo.png',
+  ogType: 'website',
+  ogLocale: 'en_US',
+  ogSiteName: 'Skilink',
+  ogLocaleAlternate: 'en_US',
 })
 </script>
 
