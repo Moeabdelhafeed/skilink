@@ -269,6 +269,17 @@ import GlareCard from '@/components/ui/glare-card/GlareCard.vue'
 import SVGMask from '@/components/ui/svg-mask/SVGMask.vue'
 
 
+const getOffscreenLeftX = (el) => {
+    const rect = el.getBoundingClientRect()
+    return -(rect.left + rect.width + 100)
+  }
+
+  const getOffscreenRightX = (el) => {
+    const rect = el.getBoundingClientRect()
+    return (window.innerWidth - rect.left) + 100
+  }
+
+  
 const helloArray = ['hello', 'こんにちは', 'bonjour']
 
 const whoWeAreSection = ref(null)
@@ -458,15 +469,6 @@ onMounted(() => {
     }
   })
 
-  const getOffscreenLeftX = (el) => {
-    const rect = el.getBoundingClientRect()
-    return -(rect.left + rect.width + 100)
-  }
-
-  const getOffscreenRightX = (el) => {
-    const rect = el.getBoundingClientRect()
-    return (window.innerWidth - rect.left) + 100
-  }
 
   const decoElements = useGSAP().utils.toArray(decoBar.value.children)
   
