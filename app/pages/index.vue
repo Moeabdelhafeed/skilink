@@ -419,30 +419,30 @@ onMounted(() => {
     })
 
     tl.from(servicesSection2.value, {
-        x: 1340,
+        x: getOffscreenLeftX(servicesSection2.value),
         duration: 0.5,
         ease: "power2.inOut",
     }, '<')
 
     tl.to(servicesSection2.value, {
-        x: -1340,
+        x: getOffscreenRightX(servicesSection2.value),
         duration: 0.5,
         ease: "power2.inOut",
     })
 
     tl.from(servicesSection3.value, {
-        x: 1340,
+        x: getOffscreenLeftX(servicesSection3.value),
         duration: 0.5,
         ease: "power2.inOut",
     }, ">-0.5")
     tl.to(servicesSection3.value, {
-        x: -1340,
+        x: getOffscreenRightX(servicesSection3.value),
         duration: 0.5,
         ease: "power2.inOut",
   })
 
     tl.from(servicesSection4.value, {
-        x: 1340,
+        x: getOffscreenLeftX(servicesSection4.value),
         duration: 0.5,
         ease: "power2.inOut",
     }, ">-0.5")
