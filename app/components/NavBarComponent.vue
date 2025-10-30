@@ -17,18 +17,142 @@
                         <button type="button" :class="navLinkClass" @click.prevent="scrollToSection('services')">
                             Services
                         </button>
-                        <button type="button" :class="navLinkClass" @click.prevent="scrollToSection('contact')">
-                            Contact
-                        </button>
+                        <Dialog>
+                            <DialogTrigger as-child>
+                                <button type="button" :class="navLinkClass">
+                                    Contact
+                                </button>
+                            </DialogTrigger>
+                            <DialogContent class="max-w-2xl max-h-[90vh] overflow-y-auto backdrop-blur-3xl bg-[#334c648c] border-white/[0.1]">
+                                <div class="space-y-6">
+                                    <div>
+                                        <div class="space-y-6">
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <MapPin class="w-6 h-6 text-white" />
+                                                </div>
+                                                <div>
+                                                    <p class="font-semibold text-lg text-white">Location</p>
+                                                    <p class="text-white text-base">Amman, Jordan</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <Mail class="w-6 h-6 text-white" />
+                                                </div>
+                                                <div>
+                                                    <p class="font-semibold text-lg text-white">Email</p>
+                                                    <a href="mailto:info@skilink.com" class="text-white hover:text-white transition-colors text-base">
+                                                        info@skilink.com
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <Phone class="w-6 h-6 text-white" />
+                                                </div>
+                                                <div>
+                                                    <p class="font-semibold text-lg text-white">Phone</p>
+                                                    <a href="tel:+962770888911" class="text-white hover:text-white transition-colors text-base">
+                                                        +962 7 7088 8911
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <Globe class="w-6 h-6 text-white" />
+                                                </div>
+                                                <div>
+                                                    <p class="font-semibold text-lg text-white">Website</p>
+                                                    <a href="https://www.skilink.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-white transition-colors text-base">
+                                                        www.skilink.com
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex gap-4 pt-4">
+                                        <DialogClose as-child>
+                                            <Button class="flex-1 rounded-full " size="lg" >
+                                                Close
+                                            </Button>
+                                        </DialogClose>
+                                    </div>
+                                </div>
+                            </DialogContent>
+                        </Dialog>
                     </div>
                 </div>
                     <!-- Desktop Contact Button - Hidden on mobile/tablet -->
                     <div class="flex gap-6 items-center h-full justify-end">
                     <!-- Desktop Contact Button -->
                     <div class="hidden md:flex">
-                        <Button class="rounded-full" @click="scrollToSection('contact')">
-                            Contact Us
-                        </Button>
+                        <Dialog>
+                            <DialogTrigger as-child>
+                                <Button class="rounded-full">
+                                    Contact Us
+                                </Button>
+                            </DialogTrigger>
+                            <DialogContent class="max-w-2xl max-h-[90vh] overflow-y-auto backdrop-blur-3xl bg-[#334c648c] border-white/[0.1]">
+                                <div class="space-y-6">
+                                    <div>
+                                        <div class="space-y-6">
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <MapPin class="w-6 h-6 text-white" />
+                                                </div>
+                                                <div>
+                                                    <p class="font-semibold text-lg text-white">Location</p>
+                                                    <p class="text-white text-base">Amman, Jordan</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <Mail class="w-6 h-6 text-white" />
+                                                </div>
+                                                <div>
+                                                    <p class="font-semibold text-lg text-white">Email</p>
+                                                    <a href="mailto:info@skilink.com" class="text-white hover:text-white transition-colors text-base">
+                                                        info@skilink.com
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <Phone class="w-6 h-6 text-white" />
+                                                </div>
+                                                <div>
+                                                    <p class="font-semibold text-lg text-white">Phone</p>
+                                                    <a href="tel:+962770888911" class="text-white hover:text-white transition-colors text-base">
+                                                        +962 7 7088 8911
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <Globe class="w-6 h-6 text-white" />
+                                                </div>
+                                                <div>
+                                                    <p class="font-semibold text-lg text-white">Website</p>
+                                                    <a href="https://www.skilink.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-white transition-colors text-base">
+                                                        www.skilink.com
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex gap-4 pt-4">
+                                        <DialogClose as-child>
+                                            <Button class="flex-1 rounded-full " size="lg" >
+                                                Close
+                                            </Button>
+                                        </DialogClose>
+                                    </div>
+                                </div>
+                            </DialogContent>
+                        </Dialog>
                     </div>
                     <!-- Mobile Navigation Drawer -->
                     <Sheet>
@@ -59,9 +183,133 @@
                                 </SheetClose>
                                 <div class="pt-4 border-t">
                                     <SheetClose as-child>
-                                        <Button class="w-full rounded-full" @click="handleMobileNavClick('contact')">
-                                            Contact Us
-                                        </Button>
+                                        <Dialog>
+                                            <DialogTrigger as-child>
+                                                <Button class="w-full rounded-full">
+                                                    Contact Us
+                                                </Button>
+                                            </DialogTrigger>
+                                            <DialogContent class="max-w-4xl max-h-[90vh] overflow-y-auto backdrop-blur-3xl bg-[#334c648c] border-white/[0.1]">
+                                                <div class="space-y-6">
+                                                    <div>
+                                                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
+                                                            Contact Us
+                                                        </h2>
+                                                        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+                                                            <!-- Logo and Description -->
+                                                            <div class="md:col-span-4">
+                                                                <img src="/images/brand/light_logo.png" alt="Skilink Logo" class="w-24 filter invert brightness-0 mb-4 mx-auto md:mx-0">
+                                                                <p class="text-white/80 leading-relaxed mb-4 text-center md:text-left">
+                                                                    Skilink connects highly skilled professionals with forward-thinking companies across the globe. We simplify remote hiring and build reliable, distributed teams.
+                                                                </p>
+                                                                <p class="text-white/60 text-sm text-center md:text-left">
+                                                                    Founded in July 2023
+                                                                </p>
+                                                            </div>
+
+                                                            <!-- Quick Links -->
+                                                            <div class="md:col-span-3">
+                                                                <h3 class="text-lg font-semibold mb-4 text-center md:text-left">Quick Links</h3>
+                                                                <ul class="space-y-3">
+                                                                    <li>
+                                                                        <button @click="scrollToSection('about')" class="text-white/80 hover:text-white transition-colors block text-center md:text-left">
+                                                                            About Us
+                                                                        </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button @click="scrollToSection('who-we-are')" class="text-white/80 hover:text-white transition-colors block text-center md:text-left">
+                                                                            Who We Are
+                                                                        </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button @click="scrollToSection('services')" class="text-white/80 hover:text-white transition-colors block text-center md:text-left">
+                                                                            Services
+                                                                        </button>
+                                                                    </li>
+                                                                    <li>
+                                                                        <button @click="scrollToSection('founding-team')" class="text-white/80 hover:text-white transition-colors block text-center md:text-left">
+                                                                            Our Team
+                                                                        </button>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <!-- Contact Information -->
+                                                            <div class="md:col-span-5">
+                                                                <h3 class="text-lg font-semibold mb-4 text-center md:text-left">Contact Information</h3>
+                                                                <div class="space-y-4">
+                                                                    <div class="flex items-start gap-3">
+                                                                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                                                            <MapPin class="w-5 h-5" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <p class="font-medium">Location</p>
+                                                                            <p class="text-white/80">Amman, Jordan</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex items-start gap-3">
+                                                                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                                                            <Mail class="w-5 h-5" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <p class="font-medium">Email</p>
+                                                                            <a href="mailto:info@skilink.com" class="text-white/80 hover:text-white transition-colors">
+                                                                                info@skilink.com
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex items-start gap-3">
+                                                                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                                                            <Phone class="w-5 h-5" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <p class="font-medium">Phone</p>
+                                                                            <a href="tel:+962770888911" class="text-white/80 hover:text-white transition-colors">
+                                                                                +962 7 7088 8911
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex items-start gap-3">
+                                                                        <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                                                            <Globe class="w-5 h-5" />
+                                                                        </div>
+                                                                        <div>
+                                                                            <p class="font-medium">Website</p>
+                                                                            <a href="https://www.skilink.com" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white transition-colors">
+                                                                                www.skilink.com
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Bottom Bar -->
+                                                        <div class="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                                                            <p class="text-white/60 text-sm text-center md:text-left">
+                                                                © {{ new Date().getFullYear() }} Skilink. All rights reserved.
+                                                            </p>
+                                                            <div class="flex gap-6 text-sm">
+                                                                <a href="#" class="text-white/80 hover:text-white transition-colors">
+                                                                    Privacy Policy
+                                                                </a>
+                                                                <a href="#" class="text-white/80 hover:text-white transition-colors">
+                                                                    Terms of Service
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex gap-4 pt-4">
+                                                        <DialogClose as-child>
+                                                            <Button class="flex-1 rounded-full " size="lg" >
+                                                                Close
+                                                            </Button>
+                                                        </DialogClose>
+                                                    </div>
+                                                </div>
+                                            </DialogContent>
+                                        </Dialog>
                                     </SheetClose>
                                 </div>
                             </div>
@@ -81,7 +329,7 @@ const navClasses = computed(() => {
   const border = y.value > 10 ? (isDark.value ? 'border-b border-white/10' : 'border-b border-black/10') : '';
   return [base, bg, border].join(' ');
 })
-import { Menu } from 'lucide-vue-next'
+import { Menu, MapPin, Mail, Phone, Globe } from 'lucide-vue-next'
 // removed NavigationMenu
 import { Button } from '@/components/ui/button'
 import {
@@ -90,6 +338,12 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet'
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogTrigger,
+} from '@/components/ui/dialog'
 
 const navItems = [
   { id: 'about', label: 'About Us' },
@@ -109,7 +363,10 @@ const scrollToSection = (sectionId) => {
 }
 
 const handleMobileNavClick = (sectionId) => {
-  scrollToSection(sectionId)
+  if (sectionId !== 'contact') {
+    scrollToSection(sectionId)
+  }
+  // Contact is handled by the dialog, so no action needed here
 }
 
 const navLinkClass = computed(() => {

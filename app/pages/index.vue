@@ -3,7 +3,7 @@
   <section id="home" class="pt-[65px] md:h-[100svh] h-max">
     <div class="relative container mx-auto pb-10 md:pb-0 text-center md:text-left px-4 md:px-20 lg:px-10 h-full w-full max-w-[1150px]">
       <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 gap-10 h-full w-full">
-        <div class="h-full w-full flex order-2 md:order-1 flex-col justify-center items-center md:items-start gap-4">
+        <div class="h-full w-full flex order-2 md:order-1 flex-col justify-center items-center md:items-start gap-4" v-motion-slide-visible-once-top>
                     <p class="text-sm md:text-base text-foreground/90 font-medium">
                         Connect with the best talent
                     </p>
@@ -15,9 +15,7 @@
             <Button class="mt-2 rounded-full" size="lg" @click="scrollToSection('about')">
                         Learn More <ArrowRight class="w-4 h-4" />
                     </Button>
-            <Button class="mt-2 rounded-full hover:bg-primary-foreground/5" variant="ghost" size="lg" @click="scrollToSection('contact')">
-                        Contact Us
-                    </Button>
+           
                     </div>
                  </div>
                 <div class="h-full w-full flex order-1 md:order-2 md:pe-10 pe-0 md:justify-end justify-center items-center">
@@ -37,7 +35,7 @@
       <div class="container relative mx-auto pb-10 md:pb-0 text-center md:text-left px-4 md:px-20 lg:px-10 h-full w-full max-w-[1150px]">
                 <div ref="servicesSection1" class="absolute h-full w-full top-0 left-0 right-0 bottom-0 flex flex-col gap-4 justify-center items-center">
                     <h1 class="md:text-5xl text-3xl font-bold text-center text-white">Our Services</h1>
-          <p class="text-white/80 md:text-lg text-base">
+          <p class="text-white/80 md:text-lg text-base max-w-[95%]">
                         Explore the comprehensive services we offer to help you succeed.
                     </p>
                 </div>
@@ -73,37 +71,60 @@
   </section>
 
  <!-- what does the name means Section -->
- <section id="what-does-the-name-means"  class="h-[calc(100vh)] pt-[75px] ">
-    <div class="bg-blue-300 flex items-center justify-centers relative  overflow-hidden h-full w-full">
+ <section ref="whatDoesTheNameMeansSection"   class="h-[calc(100vh)] bg-white  pt-[65px] ">
+   <div class="relative overflow-hidden h-full w-full">
 
-        <div class="absolute top-10 left-0 right-0 bottom-0 w-[300px] h-[60px] rounded-full bg-red-500">
+    <img ref="logo" src="/images/brand/dark_logo.png" alt="logo" class="absolute top-1/2 -translate-y-1/2 left-0 right-0 mx-auto w-[60%] object-center object-cover" />
 
-        </div>
 
-        <div class="absolute top-50 left-0 right-0 bottom-0 w-[300px] h-[60px] rounded-full bg-red-500">
+     <div ref="decoBar">
 
-        </div>
+        <!-- extra decorative red bars -->
+        <div  class="absolute top-[6%] start-[8%] bottom-0 w-[180px] h-[50px] rounded-full bg-primary/80 scale-95"></div>
+        <div  class="absolute top-[18%] start-[22%] bottom-0 w-[260px] h-[60px] rounded-full bg-primary-foreground/80 scale-110"></div>
 
-        <img src="/images/brand/dark_logo.png" alt="logo" class=" w-[60%] left-0 right-0 absolute  mx-auto object-center object-cover" />
-    </div>
-  </section>
+        
+        <div  class="absolute top-[68%] start-[30%] bottom-0 w-[190px] h-[60px] rounded-full bg-primary/80 scale-110"></div>
+        <div  class="absolute top-[78%] start-[75%] bottom-0 w-[240px] h-[50px] rounded-full bg-primary-foreground/80 scale-100"></div>
+        <div  class="absolute top-[12%] start-[55%] bottom-0 w-[300px] h-[60px] rounded-full bg-primary/80 scale-105"></div>
+       
+      
+        <div  class="absolute top-[86%] start-[10%] bottom-0 w-[220px] h-[50px] rounded-full bg-primary/80 scale-95"></div>
+  
+        <div  class="absolute top-[22%] start-[85%] bottom-0 w-[120px] h-[50px] rounded-full bg-primary-foreground/80 scale-90"></div>
+
+     </div>
+
+     
+ <div ref="whatDoesTheNameMeansContent" class="absolute  left-0 right-0 md:p-10 p-4 rounded-3xl bg-primary-white/80 backdrop-blur-3xl ring-2 ring-primary ring-offset-10 w-[80%] h-max top-1/2 -translate-y-1/2 mx-auto ">
+   <div  class="order-1 md:order-2">
+           <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">The Meaning Behind the Name</h2>
+           <p class="text-[16px] text-primary-foreground/80 leading-relaxed">
+            The name Skilink is a fusion of the words “Skill” and “Link”, embodying the very core of what we stand for — creating meaningful connections between exceptional talent and visionary companies worldwide. It symbolizes the bridge we build between expertise and opportunity, ensuring that skilled professionals find the right platforms to thrive, and organizations gain access to the capabilities they need to grow and innovate.
+
+At Skilink, our mission goes beyond recruitment. We aim to simplify remote hiring, making it seamless, transparent, and efficient for both employers and professionals. By fostering global talent accessibility, we break down geographical barriers, empowering individuals to showcase their abilities to companies that truly value them, regardless of where they are. </p>
+         </div>
+ </div>
+
+   </div>
+ </section>
 
 
 
 <section ref="whoWeAreSection" class="bg-primary-foreground">
 
   <!-- Who We Are Section -->
-  <section id="who-we-are" class="py-20 md:py-20 container mx-auto max-w-[1150px] px-4 md:px-20 lg:px-10 bg-primary-foreground">
+  <section id="about" class="py-20 md:py-20 container mx-auto max-w-[1150px] px-4 md:px-20 lg:px-10 bg-primary-foreground">
     <div class="">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
         <!-- Number Column -->
-        <div class="hidden md:flex items-center justify-center md:justify-center order-2 md:order-1">
+        <div class="hidden md:flex items-center justify-center md:justify-center order-2 md:order-1" v-motion-slide-visible-once-left>
           <div class="text-[180px] md:text-[280px] font-bold text-primary leading-none">
             01
           </div>
         </div>
         <!-- Content Column -->
-        <div class="order-1 md:order-2">
+        <div class="order-1 md:order-2" v-motion-slide-visible-once-right>
           <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Who We Are</h2>
           <p class="text-[16px] text-white/80 leading-relaxed">
             At Skilink, we believe that <strong>talent is everywhere</strong> — and what businesses need is a smart connector to bridge them with the right professionals. That's exactly where we come in. We are a company specialized in remote hiring solutions, dedicated to connecting skilled professionals from around the world with modern businesses seeking smart and scalable growth.
@@ -129,7 +150,7 @@
     <div class="">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
         <!-- Content Column -->
-        <div>
+        <div v-motion-slide-visible-once-left>
           <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">What Makes Us Different</h2>
           <p class="text-[16px] text-white/80 leading-relaxed">
             Unlike traditional outsourcing companies or freelance platforms, <strong>Skilink offers a fully managed remote team experience</strong>. We don't just connect you with talent — we become your true operational partner. From recruitment and onboarding to daily performance tracking, payroll management, and infrastructure support, we handle every detail so you don't have to.
@@ -142,7 +163,7 @@
           </p>
         </div>
         <!-- Number Column -->
-        <div class="hidden md:flex items-center justify-center md:justify-center">
+        <div class="hidden md:flex items-center justify-center md:justify-center" v-motion-slide-visible-once-right>
           <div class="text-[180px] md:text-[280px] font-bold text-primary leading-none">
             02
             </div>
@@ -161,13 +182,13 @@
     <div class="">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
         <!-- Number Column -->
-        <div class="hidden md:flex items-center justify-center md:justify-center order-2 md:order-1">
+        <div class="hidden md:flex items-center justify-center md:justify-center order-2 md:order-1" v-motion-slide-visible-once-left>
           <div class="text-[180px] md:text-[280px] font-bold text-primary leading-none">
             03
           </div>
         </div>
         <!-- Content Column -->
-        <div class="order-1 md:order-2">
+        <div class="order-1 md:order-2" v-motion-slide-visible-once-right>
           <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Vision</h2>
           <p class="text-[16px] text-white/80 leading-relaxed">
             At Skilink, we strive to be the <strong>world's leading provider of remote workforce solutions</strong>, empowering businesses to grow smarter, faster, and beyond geographical and technological boundaries.
@@ -193,7 +214,7 @@
     <div class="">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
         <!-- Content Column -->
-        <div>
+        <div v-motion-slide-visible-once-left>
           <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Mission</h2>
           <p class="text-[16px] text-white/80 leading-relaxed">
             At Skilink, we are dedicated to supporting the growth and scaling of businesses by delivering <strong>highly efficient, managed remote teams</strong> that are precisely tailored to meet each client's unique needs. We employ smart recruitment methodologies to attract top global talent, combined with seamless operational processes that ensure continuous workflow and maximize productivity.
@@ -203,7 +224,7 @@
           </p>
         </div>
         <!-- Number Column -->
-        <div class="hidden md:flex items-center justify-center md:justify-center">
+        <div class="hidden md:flex items-center justify-center md:justify-center" v-motion-slide-visible-once-right>
           <div class="text-[180px] md:text-[280px] font-bold text-primary leading-none">
             04
           </div>
@@ -220,24 +241,20 @@
 
 
   <!-- Founding Team Section -->
-  <section id="founding-team" >
-    <div class=" h-full w-full">
-      <div class="container mx-auto pb-10 md:pb-0 text-center md:text-left px-4 md:px-20 lg:px-10 h-full w-full max-w-[1150px] flex flex-col justify-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-white">Founding Team</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 founder-glare">
-          <GlareCard v-for="(member, index) in foundingTeam" :key="index">
-            <div class="h-full w-full p-6 text-center bg-red-500">
-              <div class="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span class="text-3xl font-bold text-white">{{ member.name.charAt(0) }}</span>
-              </div>
-              <h3 class="text-2xl font-bold mb-2 text-white">{{ member.name }}</h3>
-              <p class="text-white/90 font-semibold mb-4">{{ member.role }}</p>
-              <p class="text-white/80 leading-relaxed">{{ member.bio }}</p>
-            </div>
-          </GlareCard>
-        </div>
-      </div>
+  <section id="founding-team" class="h-max relative py-20 bg-white w-full flex items-center overflow-hidden justify-center" >
+
+    <img src="/images/watermark/s.png" alt="logo" class="absolute h-[calc(100%-80px)] filter brightness-0 opacity-5 object-cover object-center">
+   <div class="container py-10 mx-auto max-w-[1150px] px-4 md:px-20 lg:px-10 h-full w-full flex flex-col items-center justify-center" v-motion-slide-visible-once-top>
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-center text-primary-foreground">Meet Our <span class="text-primary">Team</span></h2>
+    <p class="text-primary-foreground/80 text-center w-[450px] max-w-[90%] text-sm mb-12">We are a team of passionate individuals who are dedicated to providing the best remote workforce solutions to our clients.</p>
+   <div class="grid grid-cols-1 md:grid-cols-3 h-full w-full gap-8">
+    <div v-for="(founder, index) in foundingTeam" :key="index" class="flex   w-full items-center justify-center ">
+      <FoundersCard :founder="founder" />
     </div>
+   </div>
+
+   </div>
+   
   </section>
 
 
@@ -249,15 +266,17 @@ import { Button } from '@/components/ui/button'
 import { ArrowDown, ArrowRight } from 'lucide-vue-next'
 import { Vue3Marquee } from 'vue3-marquee'
 import GlareCard from '@/components/ui/glare-card/GlareCard.vue'
+import SVGMask from '@/components/ui/svg-mask/SVGMask.vue'
 
 
 const helloArray = ['hello', 'こんにちは', 'bonjour']
 
 const whoWeAreSection = ref(null)
-
-const isDark = useState('isDark')
-
-
+const whatDoesTheNameMeansSection = ref(null)
+const logo = ref(null)
+  const isDark = useState('isDark')
+const decoBar = ref(null)
+const whatDoesTheNameMeansContent = ref(null)
 // Calculate how many pixels the element is from the top of the document
 const getOffsetTop = (el) => {
   let offset = 0
@@ -348,16 +367,19 @@ const coreValues = [
 
 const foundingTeam = [
   {
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     name: 'Ezzaldeen Nobani',
     role: 'Co-founder, CEO, and Director of Operations',
     bio: 'Founder of DotTech, with extensive experience in HR, remote team building, and digital systems.'
   },
   {
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     name: 'Suhaib',
     role: 'Co-founder, Financial Strategist',
     bio: 'Background in financial markets, studied in Europe, bringing financial precision and international insight.'
   },
   {
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     name: 'Zaid',
     role: 'Co-founder, Business Development & Partnerships',
     bio: 'Coming from a family business in plastics with operations in the U.S., he brings commercial vision and global connectivity.'
@@ -424,7 +446,62 @@ onMounted(() => {
         duration: 0.5,
         ease: "power2.inOut",
     }, ">-0.5")
+
+  const tl2 = useGSAP().timeline({
+    scrollTrigger: {
+      trigger: whatDoesTheNameMeansSection.value,
+      start: "top top",
+      end: "bottom+=3000 bottom",
+      pin: true,
+      scrub: true,
+      invalidateOnRefresh: true,
+    }
+  })
+
+  const getOffscreenLeftX = (el) => {
+    const rect = el.getBoundingClientRect()
+    return -(rect.left + rect.width + 100)
+  }
+
+  const getOffscreenRightX = (el) => {
+    const rect = el.getBoundingClientRect()
+    return (window.innerWidth - rect.left) + 100
+  }
+
+  const decoElements = useGSAP().utils.toArray(decoBar.value.children)
+  
+  decoElements.forEach(element => {
+    tl2.from(element, {
+     x: () => getOffscreenLeftX(element),
+     duration: 0.8,
+      ease: "power2.inOut",
+    },"<0.5")
+  })
+
+  tl2.to(logo.value, {
+    x: -getOffscreenLeftX(logo.value),
+    duration: 1,
+    ease: "power2.inOut",
+  },"<0.9")
+
+  tl2.from(whatDoesTheNameMeansContent.value, {
+    x: getOffscreenLeftX(whatDoesTheNameMeansContent.value),
+    duration: 1,
+    ease: "power2.inOut",
+  },"<0.9")
+
+  decoElements.forEach(element => {
+    tl2.to(element, {
+     x: () => getOffscreenRightX(element),
+      ease: "power2.inOut",
+    },"<0.5")
+  })
+
+
+  console.log(decoBar.value.children)
 })
+
+
 
 useSeoMeta({
   title: 'Skilink - Your Global Growth Partner',

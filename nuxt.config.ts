@@ -5,6 +5,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['~/assets/css/tailwind.css'],
+  
+  devServer: {
+    host: '0.0.0.0',
+    port: 3000 // optional, default is 3000
+  },
 
   vite: {
     plugins: [
@@ -30,5 +35,6 @@ export default defineNuxtConfig({
     'motion-v/nuxt',
     'nuxt-lucide-icons',
     'v-gsap-nuxt',
+    '@vueuse/motion/nuxt',
   ],
 })

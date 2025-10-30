@@ -13,6 +13,7 @@
     "@tailwindcss/vite": "^4.1.13",
     "@vue/shared": "^3.5.22",
     "@vueuse/core": "^14.0.0",
+    "@vueuse/motion": "^3.0.3",
     "@vueuse/nuxt": "^13.9.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.5.2",
+    "tailwind-scrollbar": "^4.0.2",
     "typescript": "^5.9.2"
   }
 }
